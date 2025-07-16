@@ -25,6 +25,10 @@ int main(int argc, char* argv[]) {
 
     SDL_Texture* mapTexture = IMG_LoadTexture(renderer, "../assets/map.png");
 
+    float mapWidth = 0.0f;
+    float mapHeight = 0.0f;
+    SDL_GetTextureSize(mapTexture, &mapWidth, &mapHeight);
+
     SDL_FRect viewport {mapWidth/2, mapHeight/2, screenWidth, screenHeight};
 
     SDL_Event event;

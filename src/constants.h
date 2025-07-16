@@ -12,5 +12,3 @@ constexpr float mapWidth {10000.0f};
 constexpr float viewportSpeed = 20.0f;
 constexpr float zoomSpeed = 20.0f;
 constexpr float aspectRatio = screenWidth/screenHeight;
-
-// Tile dimensions
