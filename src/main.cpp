@@ -26,12 +26,11 @@ int main(int argc, char* argv[]) {
     }
 
     SDL_Texture* mapTexture = IMG_LoadTexture(renderer, "../assets/map.png");
+    SDL_Texture* snakeTexture = IMG_LoadTexture(renderer, "../assets/snake.png");
 
-    float mapWidth = 0.0f;
-    float mapHeight = 0.0f;
-    SDL_GetTextureSize(mapTexture, &mapWidth, &mapHeight);
-
-    SDL_FRect viewport {mapWidth/2, mapHeight/2, screenWidth, screenHeight};
+    SDL_FRect viewport {0.0f, 0.0f, screenWidth, screenHeight};
+    SDL_FRect snake {100.0f, 100.0f, 0.0f, 0.0f};
+    SDL_GetTextureSize(snakeTexture, &snake.w, &snake.h);
 
     SDL_Event event;
     bool running = true;
@@ -77,8 +76,6 @@ int main(int argc, char* argv[]) {
                     break;
             }
 
-            SDL_PumpEvents();
-
             float dx{0.0f};
             float dy{0.0f};
             float length{0.0f};
@@ -103,6 +100,7 @@ int main(int argc, char* argv[]) {
 
         SDL_RenderClear(renderer);
         SDL_RenderTexture(renderer, mapTexture, &viewport, nullptr);
+        SDL_RenderTexture(renderer, snakeTexture, nullptr, &snake);
         SDL_RenderPresent(renderer);
     }
     
