@@ -1,3 +1,4 @@
+#include <iostream>
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 #include <SDL3_image/SDL_image.h>
@@ -55,29 +56,40 @@ int main(int argc, char* argv[]) {
                             viewport.x += viewportSpeed;
                             break;
                     }
+
+                    if (viewport.x < 0) viewport.x = 0;
+                    else if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
+                    if (viewport.y < 0) viewport.y = 0;
+                    else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
                     break;
                 case SDL_EVENT_MOUSE_WHEEL:
                     // Adjust viewport size based on mouse wheel scroll
                     float viewportChangeX = event.wheel.y * zoomSpeed;
-                    float viewportChangeY = event.wheel.y * zoomSpeed * aspectRatio;
+                    float viewportChangeY = viewportChangeX * aspectRatio;
                     viewport.w += viewportChangeX;
                     viewport.h += viewportChangeY;
                     viewport.x -= viewportChangeX/2;
                     viewport.y -= viewportChangeY/2;
+
+                    if (viewport.x < 0) viewport.x = 0;
+                    else if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
+                    if (viewport.y < 0) viewport.y = 0;
+                    else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
+
+                    if (viewport.h < 500) {
+                        viewport.h = 500;
+                        viewport.w = 500 / aspectRatio;
+                    }
+                    if (viewport.h > mapHeight) {
+                        viewport.h = mapHeight;
+                        viewport.w = mapHeight / aspectRatio;
+                    }
+                    else if (viewport.w > mapWidth) {
+                        viewport.w = mapWidth;
+                        viewport.h = mapWidth * aspectRatio;
+                    }
                     break;
             }
-
-            // Clamp viewport size
-            if (viewport.w < 100) viewport.w = 100;
-            if (viewport.h < 100) viewport.h = 100;
-            if (viewport.w > mapWidth) viewport.w = mapWidth;
-            if (viewport.h > mapHeight) viewport.h = mapHeight;
-
-            // Clamp position
-            if (viewport.x < 0) viewport.x = 0;
-            if (viewport.y < 0) viewport.y = 0;
-            if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
-            if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
         }
 
         SDL_RenderClear(renderer);
