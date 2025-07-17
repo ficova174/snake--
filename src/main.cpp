@@ -77,14 +77,20 @@ int main(int argc, char* argv[]) {
                     else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
 
                     if (viewport.h < 500) {
+                        viewport.x -= (500 / aspectRatio - viewport.w) / 2;
+                        viewport.y -= (500 - viewport.h) / 2;
                         viewport.h = 500;
                         viewport.w = 500 / aspectRatio;
                     }
-                    if (viewport.h > mapHeight) {
+                    else if (viewport.h > mapHeight) {
+                        viewport.x -= (mapHeight / aspectRatio - viewport.w) / 2;
+                        viewport.y -= (mapHeight - viewport.h) / 2;
                         viewport.h = mapHeight;
                         viewport.w = mapHeight / aspectRatio;
                     }
                     else if (viewport.w > mapWidth) {
+                        viewport.x -= (mapWidth * aspectRatio - viewport.w) / 2; // Not sure about *
+                        viewport.y -= (mapWidth - viewport.h) / 2;
                         viewport.w = mapWidth;
                         viewport.h = mapWidth * aspectRatio;
                     }
