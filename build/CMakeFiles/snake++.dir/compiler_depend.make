@@ -118,6 +118,7 @@ CMakeFiles/snake++.dir/src/main.cpp.obj: C:/Users/axell/Desktop/info/snake++/src
   C:/msys64/mingw64/include/c++/15.1.0/bits/ranges_util.h \
   C:/msys64/mingw64/include/c++/15.1.0/bits/refwrap.h \
   C:/msys64/mingw64/include/c++/15.1.0/bits/requires_hosted.h \
+  C:/msys64/mingw64/include/c++/15.1.0/bits/specfun.h \
   C:/msys64/mingw64/include/c++/15.1.0/bits/std_abs.h \
   C:/msys64/mingw64/include/c++/15.1.0/bits/stl_algobase.h \
   C:/msys64/mingw64/include/c++/15.1.0/bits/stl_construct.h \
@@ -137,6 +138,7 @@ CMakeFiles/snake++.dir/src/main.cpp.obj: C:/Users/axell/Desktop/info/snake++/src
   C:/msys64/mingw64/include/c++/15.1.0/cctype \
   C:/msys64/mingw64/include/c++/15.1.0/cerrno \
   C:/msys64/mingw64/include/c++/15.1.0/clocale \
+  C:/msys64/mingw64/include/c++/15.1.0/cmath \
   C:/msys64/mingw64/include/c++/15.1.0/compare \
   C:/msys64/mingw64/include/c++/15.1.0/concepts \
   C:/msys64/mingw64/include/c++/15.1.0/cstddef \
@@ -157,6 +159,7 @@ CMakeFiles/snake++.dir/src/main.cpp.obj: C:/Users/axell/Desktop/info/snake++/src
   C:/msys64/mingw64/include/c++/15.1.0/iosfwd \
   C:/msys64/mingw64/include/c++/15.1.0/iostream \
   C:/msys64/mingw64/include/c++/15.1.0/istream \
+  C:/msys64/mingw64/include/c++/15.1.0/limits \
   C:/msys64/mingw64/include/c++/15.1.0/new \
   C:/msys64/mingw64/include/c++/15.1.0/numbers \
   C:/msys64/mingw64/include/c++/15.1.0/ostream \
@@ -167,6 +170,18 @@ CMakeFiles/snake++.dir/src/main.cpp.obj: C:/Users/axell/Desktop/info/snake++/src
   C:/msys64/mingw64/include/c++/15.1.0/string \
   C:/msys64/mingw64/include/c++/15.1.0/string_view \
   C:/msys64/mingw64/include/c++/15.1.0/system_error \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/bessel_function.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/beta_function.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/ell_integral.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/exp_integral.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/gamma.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/hypergeometric.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/legendre_function.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/modified_bessel_func.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/poly_hermite.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/poly_laguerre.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/riemann_zeta.tcc \
+  C:/msys64/mingw64/include/c++/15.1.0/tr1/special_function_util.h \
   C:/msys64/mingw64/include/c++/15.1.0/tuple \
   C:/msys64/mingw64/include/c++/15.1.0/type_traits \
   C:/msys64/mingw64/include/c++/15.1.0/typeinfo \
@@ -192,6 +207,7 @@ CMakeFiles/snake++.dir/src/main.cpp.obj: C:/Users/axell/Desktop/info/snake++/src
   C:/msys64/mingw64/include/limits.h \
   C:/msys64/mingw64/include/locale.h \
   C:/msys64/mingw64/include/malloc.h \
+  C:/msys64/mingw64/include/math.h \
   C:/msys64/mingw64/include/process.h \
   C:/msys64/mingw64/include/pthread.h \
   C:/msys64/mingw64/include/pthread_compat.h \
@@ -260,8 +276,6 @@ C:/msys64/mingw64/include/sched.h:
 
 C:/msys64/mingw64/include/pthread_unistd.h:
 
-C:/msys64/mingw64/include/pthread_signal.h:
-
 C:/msys64/mingw64/include/pthread_compat.h:
 
 C:/msys64/mingw64/include/locale.h:
@@ -282,13 +296,27 @@ C:/msys64/mingw64/include/sec_api/stdlib_s.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/ctype_inline.h:
 
-C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++config.h:
-
 C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++allocator.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/typeinfo:
 
 C:/msys64/mingw64/include/c++/15.1.0/tuple:
+
+C:/msys64/mingw64/include/pthread_signal.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/poly_laguerre.tcc:
+
+C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++config.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/poly_hermite.tcc:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/modified_bessel_func.tcc:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/legendre_function.tcc:
+
+C:/msys64/mingw64/include/math.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/gamma.tcc:
 
 C:/msys64/mingw64/include/c++/15.1.0/system_error:
 
@@ -299,6 +327,8 @@ C:/msys64/mingw64/include/c++/15.1.0/pstl/pstl_config.h:
 C:/msys64/mingw64/include/c++/15.1.0/ostream:
 
 C:/msys64/mingw64/include/c++/15.1.0/numbers:
+
+C:/msys64/mingw64/include/c++/15.1.0/limits:
 
 C:/msys64/mingw64/include/c++/15.1.0/iostream:
 
@@ -330,6 +360,8 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/stringfwd.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/string_view.tcc:
 
+C:/msys64/mingw64/include/c++/15.1.0/bits/streambuf_iterator.h:
+
 C:/msys64/mingw64/include/SDL3/SDL_storage.h:
 
 C:/msys64/mingw64/include/corecrt_wstdlib.h:
@@ -360,6 +392,8 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/stl_algobase.h:
 
 C:/msys64/mingw64/include/SDL3/SDL_mutex.h:
 
+C:/msys64/mingw64/include/c++/15.1.0/tr1/exp_integral.tcc:
+
 C:/msys64/mingw64/include/SDL3/SDL_misc.h:
 
 C:/msys64/mingw64/include/stdio.h:
@@ -367,6 +401,8 @@ C:/msys64/mingw64/include/stdio.h:
 C:/msys64/mingw64/include/SDL3/SDL_time.h:
 
 C:/msys64/mingw64/include/SDL3/SDL_messagebox.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/hypergeometric.tcc:
 
 C:/msys64/mingw64/include/SDL3/SDL_init.h:
 
@@ -395,6 +431,8 @@ C:/msys64/mingw64/include/SDL3/SDL_clipboard.h:
 C:/msys64/mingw64/include/SDL3/SDL_blendmode.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/cstdio:
+
+C:/msys64/mingw64/include/c++/15.1.0/cmath:
 
 C:/msys64/mingw64/include/_mingw.h:
 
@@ -430,7 +468,11 @@ C:/msys64/mingw64/include/SDL3/SDL_audio.h:
 
 C:/msys64/mingw64/include/errno.h:
 
+C:/msys64/mingw64/include/c++/15.1.0/tr1/bessel_function.tcc:
+
 C:/msys64/mingw64/include/SDL3/SDL_events.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/ell_integral.tcc:
 
 C:/msys64/mingw64/include/SDL3/SDL_keyboard.h:
 
@@ -482,6 +524,8 @@ C:/msys64/mingw64/include/string.h:
 
 C:/msys64/mingw64/include/SDL3_image/SDL_image.h:
 
+C:/msys64/mingw64/include/c++/15.1.0/tr1/special_function_util.h:
+
 C:/msys64/mingw64/include/c++/15.1.0/bits/exception_defines.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/refwrap.h:
@@ -514,13 +558,13 @@ C:/msys64/mingw64/include/SDL3/SDL_keycode.h:
 
 C:/msys64/mingw64/include/_mingw_stat64.h:
 
-C:/msys64/mingw64/include/c++/15.1.0/bits/streambuf_iterator.h:
-
 C:/msys64/mingw64/include/c++/15.1.0/type_traits:
 
 C:/msys64/mingw64/include/SDL3/SDL_timer.h:
 
 C:/msys64/mingw64/include/SDL3/SDL_scancode.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/riemann_zeta.tcc:
 
 C:/msys64/mingw64/include/SDL3/SDL_haptic.h:
 
@@ -642,9 +686,13 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/move.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/ostream.h:
 
+C:/msys64/mingw64/include/c++/15.1.0/bits/specfun.h:
+
 C:/msys64/mingw64/include/c++/15.1.0/bits/ostream.tcc:
 
 C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/atomic_word.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/tr1/beta_function.tcc:
 
 C:/msys64/mingw64/include/SDL3/SDL_platform.h:
 

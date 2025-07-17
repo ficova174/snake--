@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 #include <SDL3_image/SDL_image.h>
@@ -41,27 +42,6 @@ int main(int argc, char* argv[]) {
                 case SDL_EVENT_QUIT:
                     running = false;
                     break;
-                case SDL_EVENT_KEY_DOWN:
-                    switch (event.key.scancode) {
-                        case SDL_SCANCODE_W:
-                            viewport.y -= viewportSpeed;
-                            break;
-                        case SDL_SCANCODE_S:
-                            viewport.y += viewportSpeed;
-                            break;
-                        case SDL_SCANCODE_A:
-                            viewport.x -= viewportSpeed;
-                            break;
-                        case SDL_SCANCODE_D:
-                            viewport.x += viewportSpeed;
-                            break;
-                    }
-
-                    if (viewport.x < 0) viewport.x = 0;
-                    else if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
-                    if (viewport.y < 0) viewport.y = 0;
-                    else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
-                    break;
                 case SDL_EVENT_MOUSE_WHEEL:
                     // Adjust viewport size based on mouse wheel scroll
                     float viewportChangeX = event.wheel.y * zoomSpeed;
@@ -95,6 +75,29 @@ int main(int argc, char* argv[]) {
                         viewport.h = mapWidth * aspectRatio;
                     }
                     break;
+            }
+
+            SDL_PumpEvents();
+
+            float dx{0.0f};
+            float dy{0.0f};
+            float length{0.0f};
+            const bool* keys = SDL_GetKeyboardState(nullptr);
+            
+            if (keys[SDL_SCANCODE_W]) dy -= 1.0f;
+            if (keys[SDL_SCANCODE_S]) dy += 1.0f;
+            if (keys[SDL_SCANCODE_A]) dx -= 1.0f;
+            if (keys[SDL_SCANCODE_D]) dx += 1.0f;
+            length = std::sqrt(dx * dx + dy * dy);
+
+            if (length > 0.0f) {
+                viewport.x += dx * viewportSpeed / length;
+                viewport.y += dy * viewportSpeed / length;
+
+                if (viewport.x < 0) viewport.x = 0;
+                else if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
+                if (viewport.y < 0) viewport.y = 0;
+                else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
             }
         }
 
