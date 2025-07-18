@@ -56,26 +56,30 @@ int main(int argc, char* argv[]) {
 
                     snakeViewport.w *= newOldRatio;
                     snakeViewport.h *= newOldRatio;
-                    snakeViewport.x -= viewportChangeX / 2;
-                    snakeViewport.y -= viewportChangeX / 2;
 
                     if (viewport.h < 500) {
                         viewport.x -= (500 / aspectRatio - viewport.w) / 2;
                         viewport.y -= (500 - viewport.h) / 2;
                         viewport.h = 500;
                         viewport.w = 500 / aspectRatio;
+                        snakeViewport.w /= newOldRatio;
+                        snakeViewport.h /= newOldRatio;
                     }
                     else if (viewport.h > mapHeight) {
                         viewport.x -= (mapHeight / aspectRatio - viewport.w) / 2;
                         viewport.y -= (mapHeight - viewport.h) / 2;
                         viewport.h = mapHeight;
                         viewport.w = mapHeight / aspectRatio;
+                        snakeViewport.w /= newOldRatio;
+                        snakeViewport.h /= newOldRatio;
                     }
                     else if (viewport.w > mapWidth) {
                         viewport.x -= (mapWidth * aspectRatio - viewport.w) / 2; // Not sure about *
                         viewport.y -= (mapWidth - viewport.h) / 2;
                         viewport.w = mapWidth;
                         viewport.h = mapWidth * aspectRatio;
+                        snakeViewport.w /= newOldRatio; // Not sure about /
+                        snakeViewport.h /= newOldRatio;
                     }
 
                     if (viewport.x < 0) viewport.x = 0;
@@ -106,8 +110,10 @@ int main(int argc, char* argv[]) {
             if (viewport.y < 0) viewport.y = 0;
             else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
 
-            snakeViewport.x = snake.x - viewport.x;
-            snakeViewport.y = snake.y - viewport.y;
+            float currentZoomFactor = screenWidth / viewport.w;
+
+            snakeViewport.x = (snake.x - viewport.x) * currentZoomFactor;
+            snakeViewport.y = (snake.y - viewport.y) * currentZoomFactor;
         }
 
         SDL_RenderClear(renderer);
