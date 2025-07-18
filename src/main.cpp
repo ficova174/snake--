@@ -27,10 +27,10 @@ int main(int argc, char* argv[]) {
 
     SDL_Texture* mapTexture = IMG_LoadTexture(renderer, "../assets/map.png");
     SDL_Texture* snakeTexture = IMG_LoadTexture(renderer, "../assets/snake.png");
-
-    SDL_FRect viewport {0.0f, 0.0f, screenWidth, screenHeight};
-    SDL_FRect snake {500.0f, 500.0f, 0.0f, 0.0f};
     SDL_GetTextureSize(mapTexture, &mapWidth, &mapHeight);
+
+    SDL_FRect viewport {screenWidth/2, screenHeight/2, screenWidth, screenHeight};
+    SDL_FRect snake {screenWidth/2, screenHeight/2, 0.0f, 0.0f};
     SDL_GetTextureSize(snakeTexture, &snake.w, &snake.h);
     SDL_FRect snakeViewport {snake.x - viewport.x, snake.y - viewport.y, snake.w, snake.h};
     
@@ -116,9 +116,15 @@ int main(int argc, char* argv[]) {
             snakeViewport.y = (snake.y - viewport.y) * currentZoomFactor;
         }
 
+        float mousex, mousey; // Relative to the window/viewport
+        SDL_GetMouseState(&mousex, &mousey);
+        float snakeCenterX {snake.x + snake.w / 2.0f};
+        float snakeCenterY {snake.y + snake.h / 2.0f};
+        double angle = std::atan2(mousey + viewport.y - snakeCenterY, mousex + viewport.x - snakeCenterX) * 180.0 / M_PI;
+
         SDL_RenderClear(renderer);
         SDL_RenderTexture(renderer, mapTexture, &viewport, nullptr);
-        SDL_RenderTexture(renderer, snakeTexture, nullptr, &snakeViewport);
+        SDL_RenderTextureRotated(renderer, snakeTexture, nullptr, &snakeViewport, angle, nullptr, SDL_FLIP_NONE);
         SDL_RenderPresent(renderer);
     }
     
