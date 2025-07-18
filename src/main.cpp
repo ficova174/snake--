@@ -29,9 +29,11 @@ int main(int argc, char* argv[]) {
     SDL_Texture* snakeTexture = IMG_LoadTexture(renderer, "../assets/snake.png");
 
     SDL_FRect viewport {0.0f, 0.0f, screenWidth, screenHeight};
-    SDL_FRect snake {100.0f, 100.0f, 0.0f, 0.0f};
+    SDL_FRect snake {500.0f, 500.0f, 0.0f, 0.0f};
+    SDL_GetTextureSize(mapTexture, &mapWidth, &mapHeight);
     SDL_GetTextureSize(snakeTexture, &snake.w, &snake.h);
-
+    SDL_FRect snakeViewport {snake.x - viewport.x, snake.y - viewport.y, snake.w, snake.h};
+    
     SDL_Event event;
     bool running = true;
 
@@ -45,15 +47,17 @@ int main(int argc, char* argv[]) {
                     // Adjust viewport size based on mouse wheel scroll
                     float viewportChangeX = event.wheel.y * zoomSpeed;
                     float viewportChangeY = viewportChangeX * aspectRatio;
+                    float newOldRatio = viewport.w / (viewport.w + viewportChangeX);
+
                     viewport.w += viewportChangeX;
                     viewport.h += viewportChangeY;
-                    viewport.x -= viewportChangeX/2;
-                    viewport.y -= viewportChangeY/2;
+                    viewport.x -= viewportChangeX / 2;
+                    viewport.y -= viewportChangeY / 2;
 
-                    if (viewport.x < 0) viewport.x = 0;
-                    else if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
-                    if (viewport.y < 0) viewport.y = 0;
-                    else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
+                    snakeViewport.w *= newOldRatio;
+                    snakeViewport.h *= newOldRatio;
+                    snakeViewport.x -= viewportChangeX / 2;
+                    snakeViewport.y -= viewportChangeX / 2;
 
                     if (viewport.h < 500) {
                         viewport.x -= (500 / aspectRatio - viewport.w) / 2;
@@ -73,6 +77,11 @@ int main(int argc, char* argv[]) {
                         viewport.w = mapWidth;
                         viewport.h = mapWidth * aspectRatio;
                     }
+
+                    if (viewport.x < 0) viewport.x = 0;
+                    else if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
+                    if (viewport.y < 0) viewport.y = 0;
+                    else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
                     break;
             }
 
@@ -90,17 +99,20 @@ int main(int argc, char* argv[]) {
             if (length > 0.0f) {
                 viewport.x += dx * viewportSpeed / length;
                 viewport.y += dy * viewportSpeed / length;
-
-                if (viewport.x < 0) viewport.x = 0;
-                else if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
-                if (viewport.y < 0) viewport.y = 0;
-                else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
             }
+
+            if (viewport.x < 0) viewport.x = 0;
+            else if (viewport.x + viewport.w > mapWidth) viewport.x = mapWidth - viewport.w;
+            if (viewport.y < 0) viewport.y = 0;
+            else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
+
+            snakeViewport.x = snake.x - viewport.x;
+            snakeViewport.y = snake.y - viewport.y;
         }
 
         SDL_RenderClear(renderer);
         SDL_RenderTexture(renderer, mapTexture, &viewport, nullptr);
-        SDL_RenderTexture(renderer, snakeTexture, nullptr, &snake);
+        SDL_RenderTexture(renderer, snakeTexture, nullptr, &snakeViewport);
         SDL_RenderPresent(renderer);
     }
     
