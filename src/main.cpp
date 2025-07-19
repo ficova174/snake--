@@ -29,8 +29,8 @@ int main(int argc, char* argv[]) {
     SDL_Texture* snakeTexture = IMG_LoadTexture(renderer, "../assets/snake.png");
     SDL_GetTextureSize(mapTexture, &mapWidth, &mapHeight);
 
-    SDL_FRect viewport {screenWidth/2, screenHeight/2, screenWidth, screenHeight};
-    SDL_FRect snake {screenWidth/2, screenHeight/2, 0.0f, 0.0f};
+    SDL_FRect viewport {mapWidth/2, mapHeight/2, screenWidth, screenHeight};
+    SDL_FRect snake {mapWidth/2, mapHeight/2, 0.0f, 0.0f};
     SDL_GetTextureSize(snakeTexture, &snake.w, &snake.h);
     SDL_FRect snakeViewport {snake.x - viewport.x, snake.y - viewport.y, snake.w, snake.h};
     
@@ -38,6 +38,7 @@ int main(int argc, char* argv[]) {
     bool running = true;
 
     while (running) {
+        float currentZoomFactor = screenWidth / viewport.w;
         while (SDL_PollEvent(&event)) {
             switch(event.type) {
                 case SDL_EVENT_QUIT:
@@ -110,17 +111,26 @@ int main(int argc, char* argv[]) {
             if (viewport.y < 0) viewport.y = 0;
             else if (viewport.y + viewport.h > mapHeight) viewport.y = mapHeight - viewport.h;
 
-            float currentZoomFactor = screenWidth / viewport.w;
+            // Snake viewport position
+            currentZoomFactor = screenWidth / viewport.w;
 
             snakeViewport.x = (snake.x - viewport.x) * currentZoomFactor;
             snakeViewport.y = (snake.y - viewport.y) * currentZoomFactor;
         }
 
+        // Rotation of the snake
         float mousex, mousey; // Relative to the window/viewport
         SDL_GetMouseState(&mousex, &mousey);
-        float snakeCenterX {snake.x + snake.w / 2.0f};
-        float snakeCenterY {snake.y + snake.h / 2.0f};
-        double angle = std::atan2(mousey + viewport.y - snakeCenterY, mousex + viewport.x - snakeCenterX) * 180.0 / M_PI;
+        float snakeCenterX{snake.x + snake.w / 2.0f};
+        float snakeCenterY{snake.y + snake.h / 2.0f};
+        float snakeMousedy = mousey / currentZoomFactor + viewport.y - snakeCenterY;
+        float snakeMousedx = mousex / currentZoomFactor + viewport.x - snakeCenterX;
+        double angle = std::atan2(snakeMousedy, snakeMousedx) * 180.0f / M_PI;
+
+        // Snake movement
+        float snakeSpeedNormal{std::sqrt(snakeMousedx * snakeMousedx + snakeMousedy * snakeMousedy)};
+
+        if (snakeSpeedNormal )
 
         SDL_RenderClear(renderer);
         SDL_RenderTexture(renderer, mapTexture, &viewport, nullptr);

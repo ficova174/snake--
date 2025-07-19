@@ -12,3 +12,7 @@ float mapWidth;
 constexpr float viewportSpeed {20.0f};
 constexpr float zoomSpeed {20.0f};
 constexpr float aspectRatio = screenHeight/screenWidth;
+
+// Snake settings
+constexpr float snakeSpeed {20.0f};
+constexpr float snakeDashSpeed {20.0f};
