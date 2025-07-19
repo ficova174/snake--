@@ -37,8 +37,14 @@ int main(int argc, char* argv[]) {
     SDL_Event event;
     bool running = true;
 
+    Uint64 lastTime = SDL_GetTicks();
     while (running) {
-        float currentZoomFactor = screenWidth / viewport.w;
+        Uint64 currentTime = SDL_GetTicks();
+        float deltaTime = (currentTime - lastTime) / 1.0e3f; // Convert to seconds
+        lastTime = currentTime;
+
+        float currentZoomFactor;
+        const bool* keys = SDL_GetKeyboardState(nullptr);
         while (SDL_PollEvent(&event)) {
             switch(event.type) {
                 case SDL_EVENT_QUIT:
@@ -46,7 +52,7 @@ int main(int argc, char* argv[]) {
                     break;
                 case SDL_EVENT_MOUSE_WHEEL:
                     // Adjust viewport size based on mouse wheel scroll
-                    float viewportChangeX = event.wheel.y * zoomSpeed;
+                    float viewportChangeX = event.wheel.y * zoomSpeed * deltaTime;
                     float viewportChangeY = viewportChangeX * aspectRatio;
                     float newOldRatio = viewport.w / (viewport.w + viewportChangeX);
 
@@ -93,7 +99,6 @@ int main(int argc, char* argv[]) {
             float dx{0.0f};
             float dy{0.0f};
             float length{0.0f};
-            const bool* keys = SDL_GetKeyboardState(nullptr);
             
             if (keys[SDL_SCANCODE_W]) dy -= 1.0f;
             if (keys[SDL_SCANCODE_S]) dy += 1.0f;
@@ -102,8 +107,8 @@ int main(int argc, char* argv[]) {
             length = std::sqrt(dx * dx + dy * dy);
 
             if (length > 0.0f) {
-                viewport.x += dx * viewportSpeed / length;
-                viewport.y += dy * viewportSpeed / length;
+                if (dx != 0.0f) viewport.x += viewportSpeed * deltaTime * dx / length;
+                if (dy != 0.0f) viewport.y += viewportSpeed * deltaTime * dy / length;
             }
 
             if (viewport.x < 0) viewport.x = 0;
@@ -116,25 +121,20 @@ int main(int argc, char* argv[]) {
 
             snakeViewport.x = (snake.x - viewport.x) * currentZoomFactor;
             snakeViewport.y = (snake.y - viewport.y) * currentZoomFactor;
+
+            // Snake movement
+            if (keys[SDL_SCANCODE_Q]) snakeAngle -= (snakeAngle > -360.0f) ? snakeRotationSpeed * deltaTime: -360.0f;
+            if (keys[SDL_SCANCODE_E]) snakeAngle += (snakeAngle < 360.0f) ? snakeRotationSpeed * deltaTime: -360.0f;
         }
 
-        // Rotation of the snake
-        float mousex, mousey; // Relative to the window/viewport
-        SDL_GetMouseState(&mousex, &mousey);
-        float snakeCenterX{snake.x + snake.w / 2.0f};
-        float snakeCenterY{snake.y + snake.h / 2.0f};
-        float snakeMousedy = mousey / currentZoomFactor + viewport.y - snakeCenterY;
-        float snakeMousedx = mousex / currentZoomFactor + viewport.x - snakeCenterX;
-        double angle = std::atan2(snakeMousedy, snakeMousedx) * 180.0f / M_PI;
-
-        // Snake movement
-        float snakeSpeedNormal{std::sqrt(snakeMousedx * snakeMousedx + snakeMousedy * snakeMousedy)};
-
-        if (snakeSpeedNormal )
-
+        snake.x += snakeSpeed * deltaTime * std::cos(snakeAngle * M_PI / 180.0f);
+        snake.y += snakeSpeed * deltaTime * std::sin(snakeAngle * M_PI / 180.0f);
+        snakeViewport.x = (snake.x - viewport.x) * currentZoomFactor;
+        snakeViewport.y = (snake.y - viewport.y) * currentZoomFactor;
+        
         SDL_RenderClear(renderer);
         SDL_RenderTexture(renderer, mapTexture, &viewport, nullptr);
-        SDL_RenderTextureRotated(renderer, snakeTexture, nullptr, &snakeViewport, angle, nullptr, SDL_FLIP_NONE);
+        SDL_RenderTextureRotated(renderer, snakeTexture, nullptr, &snakeViewport, snakeAngle, nullptr, SDL_FLIP_NONE);
         SDL_RenderPresent(renderer);
     }
     
