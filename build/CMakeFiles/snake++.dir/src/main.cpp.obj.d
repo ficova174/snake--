@@ -232,4 +232,7 @@ CMakeFiles/snake++.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/SDL3/SDL_main.h \
  C:/msys64/mingw64/include/SDL3/SDL_main_impl.h \
  C:/msys64/mingw64/include/SDL3_image/SDL_image.h \
- C:\Users\axell\Desktop\info\snake++\src\constants.h
+ C:/Users/axell/Desktop/info/snake++/include/constants.h \
+ C:/Users/axell/Desktop/info/snake++/include/game.h \
+ C:/Users/axell/Desktop/info/snake++/include/viewport.h \
+ C:/Users/axell/Desktop/info/snake++/include/snake.h

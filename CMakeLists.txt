@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Add the include directory for header files
 include_directories(include)
 
-set(SOURCES src/main.cpp src/constants.h)
+set(SOURCES src/main.cpp src/game.cpp src/viewport.cpp src/snake.cpp)
 
 find_package(SDL3 REQUIRED)
 find_package(SDL3_image REQUIRED)

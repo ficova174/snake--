@@ -128,6 +128,30 @@ snake++/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/build
 .PHONY : snake++/fast
 
+src/game.obj: src/game.cpp.obj
+.PHONY : src/game.obj
+
+# target to build an object file
+src/game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/game.cpp.obj
+.PHONY : src/game.cpp.obj
+
+src/game.i: src/game.cpp.i
+.PHONY : src/game.i
+
+# target to preprocess a source file
+src/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
+
+src/game.s: src/game.cpp.s
+.PHONY : src/game.s
+
+# target to generate assembly for a file
+src/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -152,6 +176,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/snake.obj: src/snake.cpp.obj
+.PHONY : src/snake.obj
+
+# target to build an object file
+src/snake.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/snake.cpp.obj
+.PHONY : src/snake.cpp.obj
+
+src/snake.i: src/snake.cpp.i
+.PHONY : src/snake.i
+
+# target to preprocess a source file
+src/snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/snake.cpp.i
+.PHONY : src/snake.cpp.i
+
+src/snake.s: src/snake.cpp.s
+.PHONY : src/snake.s
+
+# target to generate assembly for a file
+src/snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/snake.cpp.s
+.PHONY : src/snake.cpp.s
+
+src/viewport.obj: src/viewport.cpp.obj
+.PHONY : src/viewport.obj
+
+# target to build an object file
+src/viewport.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/viewport.cpp.obj
+.PHONY : src/viewport.cpp.obj
+
+src/viewport.i: src/viewport.cpp.i
+.PHONY : src/viewport.i
+
+# target to preprocess a source file
+src/viewport.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/viewport.cpp.i
+.PHONY : src/viewport.cpp.i
+
+src/viewport.s: src/viewport.cpp.s
+.PHONY : src/viewport.s
+
+# target to generate assembly for a file
+src/viewport.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\snake++.dir\build.make CMakeFiles/snake++.dir/src/viewport.cpp.s
+.PHONY : src/viewport.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +233,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... snake++
+	@echo ... src/game.obj
+	@echo ... src/game.i
+	@echo ... src/game.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/snake.obj
+	@echo ... src/snake.i
+	@echo ... src/snake.s
+	@echo ... src/viewport.obj
+	@echo ... src/viewport.i
+	@echo ... src/viewport.s
 .PHONY : help
 
 

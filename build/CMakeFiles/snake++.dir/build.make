@@ -86,21 +86,72 @@ CMakeFiles/snake++.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake++.dir/src/main.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\axell\Desktop\info\snake++\src\main.cpp -o CMakeFiles\snake++.dir\src\main.cpp.s
 
+CMakeFiles/snake++.dir/src/game.cpp.obj: CMakeFiles/snake++.dir/flags.make
+CMakeFiles/snake++.dir/src/game.cpp.obj: CMakeFiles/snake++.dir/includes_CXX.rsp
+CMakeFiles/snake++.dir/src/game.cpp.obj: C:/Users/axell/Desktop/info/snake++/src/game.cpp
+CMakeFiles/snake++.dir/src/game.cpp.obj: CMakeFiles/snake++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\axell\Desktop\info\snake++\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/snake++.dir/src/game.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake++.dir/src/game.cpp.obj -MF CMakeFiles\snake++.dir\src\game.cpp.obj.d -o CMakeFiles\snake++.dir\src\game.cpp.obj -c C:\Users\axell\Desktop\info\snake++\src\game.cpp
+
+CMakeFiles/snake++.dir/src/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake++.dir/src/game.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\axell\Desktop\info\snake++\src\game.cpp > CMakeFiles\snake++.dir\src\game.cpp.i
+
+CMakeFiles/snake++.dir/src/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake++.dir/src/game.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\axell\Desktop\info\snake++\src\game.cpp -o CMakeFiles\snake++.dir\src\game.cpp.s
+
+CMakeFiles/snake++.dir/src/viewport.cpp.obj: CMakeFiles/snake++.dir/flags.make
+CMakeFiles/snake++.dir/src/viewport.cpp.obj: CMakeFiles/snake++.dir/includes_CXX.rsp
+CMakeFiles/snake++.dir/src/viewport.cpp.obj: C:/Users/axell/Desktop/info/snake++/src/viewport.cpp
+CMakeFiles/snake++.dir/src/viewport.cpp.obj: CMakeFiles/snake++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\axell\Desktop\info\snake++\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snake++.dir/src/viewport.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake++.dir/src/viewport.cpp.obj -MF CMakeFiles\snake++.dir\src\viewport.cpp.obj.d -o CMakeFiles\snake++.dir\src\viewport.cpp.obj -c C:\Users\axell\Desktop\info\snake++\src\viewport.cpp
+
+CMakeFiles/snake++.dir/src/viewport.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake++.dir/src/viewport.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\axell\Desktop\info\snake++\src\viewport.cpp > CMakeFiles\snake++.dir\src\viewport.cpp.i
+
+CMakeFiles/snake++.dir/src/viewport.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake++.dir/src/viewport.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\axell\Desktop\info\snake++\src\viewport.cpp -o CMakeFiles\snake++.dir\src\viewport.cpp.s
+
+CMakeFiles/snake++.dir/src/snake.cpp.obj: CMakeFiles/snake++.dir/flags.make
+CMakeFiles/snake++.dir/src/snake.cpp.obj: CMakeFiles/snake++.dir/includes_CXX.rsp
+CMakeFiles/snake++.dir/src/snake.cpp.obj: C:/Users/axell/Desktop/info/snake++/src/snake.cpp
+CMakeFiles/snake++.dir/src/snake.cpp.obj: CMakeFiles/snake++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\axell\Desktop\info\snake++\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/snake++.dir/src/snake.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake++.dir/src/snake.cpp.obj -MF CMakeFiles\snake++.dir\src\snake.cpp.obj.d -o CMakeFiles\snake++.dir\src\snake.cpp.obj -c C:\Users\axell\Desktop\info\snake++\src\snake.cpp
+
+CMakeFiles/snake++.dir/src/snake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake++.dir/src/snake.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\axell\Desktop\info\snake++\src\snake.cpp > CMakeFiles\snake++.dir\src\snake.cpp.i
+
+CMakeFiles/snake++.dir/src/snake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake++.dir/src/snake.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\axell\Desktop\info\snake++\src\snake.cpp -o CMakeFiles\snake++.dir\src\snake.cpp.s
+
 # Object files for target snake++
 snake_______OBJECTS = \
-"CMakeFiles/snake++.dir/src/main.cpp.obj"
+"CMakeFiles/snake++.dir/src/main.cpp.obj" \
+"CMakeFiles/snake++.dir/src/game.cpp.obj" \
+"CMakeFiles/snake++.dir/src/viewport.cpp.obj" \
+"CMakeFiles/snake++.dir/src/snake.cpp.obj"
 
 # External object files for target snake++
 snake_______EXTERNAL_OBJECTS =
 
 snake++.exe: CMakeFiles/snake++.dir/src/main.cpp.obj
+snake++.exe: CMakeFiles/snake++.dir/src/game.cpp.obj
+snake++.exe: CMakeFiles/snake++.dir/src/viewport.cpp.obj
+snake++.exe: CMakeFiles/snake++.dir/src/snake.cpp.obj
 snake++.exe: CMakeFiles/snake++.dir/build.make
 snake++.exe: C:/msys64/mingw64/lib/libSDL3_image.dll.a
 snake++.exe: C:/msys64/mingw64/lib/libSDL3.dll.a
 snake++.exe: CMakeFiles/snake++.dir/linkLibs.rsp
 snake++.exe: CMakeFiles/snake++.dir/objects1.rsp
 snake++.exe: CMakeFiles/snake++.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\axell\Desktop\info\snake++\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable snake++.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\axell\Desktop\info\snake++\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable snake++.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\snake++.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

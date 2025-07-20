@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/axell/Desktop/info/snake++/src/game.cpp" "CMakeFiles/snake++.dir/src/game.cpp.obj" "gcc" "CMakeFiles/snake++.dir/src/game.cpp.obj.d"
   "C:/Users/axell/Desktop/info/snake++/src/main.cpp" "CMakeFiles/snake++.dir/src/main.cpp.obj" "gcc" "CMakeFiles/snake++.dir/src/main.cpp.obj.d"
+  "C:/Users/axell/Desktop/info/snake++/src/snake.cpp" "CMakeFiles/snake++.dir/src/snake.cpp.obj" "gcc" "CMakeFiles/snake++.dir/src/snake.cpp.obj.d"
+  "C:/Users/axell/Desktop/info/snake++/src/viewport.cpp" "CMakeFiles/snake++.dir/src/viewport.cpp.obj" "gcc" "CMakeFiles/snake++.dir/src/viewport.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
