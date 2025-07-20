@@ -9,38 +9,29 @@
 #include "snake.h"
 
 int main(int argc, char* argv[]) {
-    SDL_SetAppMetadata("Snake++", nullptr, nullptr);
-    SDL_SetAppMetadataProperty(SDL_PROP_APP_METADATA_CREATOR_STRING, "Axel L.");
-
-    if (!SDL_Init(SDL_INIT_VIDEO)) {
-        SDL_Log("Failed to initialize SDL: %u", SDL_GetError());
-        SDL_Quit();
-        return 1;
-    }
-
-    SDL_Window* window = nullptr;
-    SDL_Renderer* renderer = nullptr;
-
-    if (!SDL_CreateWindowAndRenderer("Snake++", screenWidth, screenHeight, 0, &window, &renderer)) {
-        SDL_Log("SDL_CreateWindowAndRenderer failed: %s", SDL_GetError());
-        SDL_Quit();
-        return 1;
-    }
-
-    SDL_Texture* mapTexture = IMG_LoadTexture(renderer, "../assets/map.png");
-    SDL_Texture* snakeTexture = IMG_LoadTexture(renderer, "../assets/snake.png");
+    gameInit();
+    // Map dimensions
+    float mapHeight;
+    float mapWidth;
     SDL_GetTextureSize(mapTexture, &mapWidth, &mapHeight);
 
-    SDL_FRect viewport {mapWidth/2, mapHeight/2, screenWidth, screenHeight};
-    SDL_FRect snake {mapWidth/2, mapHeight/2, 0.0f, 0.0f};
+    SDL_FRect viewport{mapWidth/2, mapHeight/2, screenWidth, screenHeight};
+    SDL_FRect snake{mapWidth/2, mapHeight/2, 0.0f, 0.0f};
     SDL_GetTextureSize(snakeTexture, &snake.w, &snake.h);
-    SDL_FRect snakeViewport {snake.x - viewport.x, snake.y - viewport.y, snake.w, snake.h};
+    SDL_FRect snakeViewport{snake.x - viewport.x, snake.y - viewport.y, snake.w, snake.h};
     
     SDL_Event event;
     bool running = true;
 
     Uint64 perfFreq = SDL_GetPerformanceFrequency();
     Uint64 lastCounter = SDL_GetPerformanceCounter();
+
+
+
+    float snakeAngle = 0.0f;
+
+
+
     while (running) {
         Uint64 currentCounter = SDL_GetPerformanceCounter();
         float deltaTime = (float)(currentCounter - lastCounter) / perfFreq; // Convert to seconds
@@ -152,10 +143,6 @@ int main(int argc, char* argv[]) {
     }
     
     // Clean up and exit
-    SDL_DestroyTexture(mapTexture);
-    SDL_DestroyTexture(snakeTexture);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+    gameCleanup();
     return 0;
 }

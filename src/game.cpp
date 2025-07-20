@@ -3,6 +3,11 @@
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
 
+SDL_Window* window;
+SDL_Renderer* renderer;
+SDL_Texture* mapTexture;
+SDL_Texture* snakeTexture;
+
 bool gameInit() {
     SDL_SetAppMetadata("Snake++", nullptr, nullptr);
     SDL_SetAppMetadataProperty(SDL_PROP_APP_METADATA_CREATOR_STRING, "Axel L.");
@@ -38,4 +43,16 @@ bool gameInit() {
         return 1;
     }
     return 0;
+}
+
+void gameLoop() {
+
+}
+
+void gameCleanup() {
+    SDL_DestroyTexture(mapTexture);
+    SDL_DestroyTexture(snakeTexture);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
 }
