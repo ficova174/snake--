@@ -27,7 +27,7 @@ bool gameInit() {
     mapTexture = IMG_LoadTexture(renderer, "../assets/map.png");
     snakeTexture = IMG_LoadTexture(renderer, "../assets/snake.png");
     
-    if (mapTexture == nullptr) {
+    if (!mapTexture) {
         SDL_Log("Failed to load map texture: %s", SDL_GetError());
         SDL_DestroyRenderer(renderer);
         SDL_DestroyWindow(window);
@@ -35,7 +35,7 @@ bool gameInit() {
         return 1;
     }
 
-    if (snakeTexture == nullptr) {
+    if (!snakeTexture) {
         SDL_Log("Failed to load snake texture: %s", SDL_GetError());
         SDL_DestroyRenderer(renderer);
         SDL_DestroyWindow(window);
