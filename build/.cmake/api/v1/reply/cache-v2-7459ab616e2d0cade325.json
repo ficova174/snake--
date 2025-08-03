@@ -759,7 +759,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "snake++"
+			"value" : "Snake++"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1176,6 +1176,42 @@
 			],
 			"type" : "PATH",
 			"value" : "C:/msys64/mingw64/lib/cmake/SDL3_image"
+		},
+		{
+			"name" : "Snake++_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/axell/Desktop/info/snake++/build"
+		},
+		{
+			"name" : "Snake++_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "Snake++_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/axell/Desktop/info/snake++"
 		},
 		{
 			"name" : "snake++_BINARY_DIR",

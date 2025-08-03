@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "snake++",
+					"name" : "Snake++",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "snake++::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-snake++-Debug-1a16ca53ccc8f20c8498.json",
-					"name" : "snake++",
+					"id" : "Snake++::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Snake++-Debug-b631adb2a9b09b8f238c.json",
+					"name" : "Snake++",
 					"projectIndex" : 0
 				}
 			]

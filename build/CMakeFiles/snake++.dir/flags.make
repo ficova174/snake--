@@ -4,7 +4,7 @@
 # compile CXX with C:/msys64/mingw64/bin/g++.exe
 CXX_DEFINES = 
 
-CXX_INCLUDES = @CMakeFiles/snake++.dir/includes_CXX.rsp
+CXX_INCLUDES = @CMakeFiles/Snake++.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g -std=gnu++20
+CXX_FLAGS =  -Wall -Wextra -Werror -pedantic -Wshadow -g -O2 -g -std=gnu++20
 

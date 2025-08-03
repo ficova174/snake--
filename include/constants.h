@@ -12,6 +12,6 @@ constexpr float zoomSpeed{3.0e3f};
 constexpr float aspectRatio = screenHeight/screenWidth;
 
 // Snake settings
-constexpr float snakeSpeed{100.0f};
-constexpr float snakeDashMultiplier{3.0f};
+constexpr float snakeSpeed{150.0f};
+constexpr float snakeDashMultiplier{2.0f};
 constexpr float snakeRotationSpeed{300.0f};

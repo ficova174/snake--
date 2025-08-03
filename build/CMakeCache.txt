@@ -130,7 +130,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=snake++
+CMAKE_PROJECT_NAME:STATIC=Snake++
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/msys64/mingw64/bin/ranlib.exe
@@ -220,6 +220,15 @@ SDL3_DIR:PATH=C:/msys64/mingw64/lib/cmake/SDL3
 
 //The directory containing a CMake configuration file for SDL3_image.
 SDL3_image_DIR:PATH=C:/msys64/mingw64/lib/cmake/SDL3_image
+
+//Value Computed by CMake
+Snake++_BINARY_DIR:STATIC=C:/Users/axell/Desktop/info/snake++/build
+
+//Value Computed by CMake
+Snake++_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Snake++_SOURCE_DIR:STATIC=C:/Users/axell/Desktop/info/snake++
 
 //Value Computed by CMake
 snake++_BINARY_DIR:STATIC=C:/Users/axell/Desktop/info/snake++/build

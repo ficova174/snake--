@@ -1,4 +1,4 @@
-CMakeFiles/snake++.dir/src/game.cpp.obj: \
+CMakeFiles/Snake++.dir/src/game.cpp.obj: \
  C:\Users\axell\Desktop\info\snake++\src\game.cpp \
  C:/Users/axell/Desktop/info/snake++/include/game.h \
  C:/msys64/mingw64/include/SDL3/SDL.h \

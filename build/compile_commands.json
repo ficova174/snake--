@@ -1,26 +1,26 @@
 [
 {
   "directory": "C:/Users/axell/Desktop/info/snake++/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/snake++.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\snake++.dir\\src\\main.cpp.obj -c C:\\Users\\axell\\Desktop\\info\\snake++\\src\\main.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/Snake++.dir/includes_CXX.rsp  -Wall -Wextra -Werror -pedantic -Wshadow -g -O2 -g -std=gnu++20 -o CMakeFiles\\Snake++.dir\\src\\main.cpp.obj -c C:\\Users\\axell\\Desktop\\info\\snake++\\src\\main.cpp",
   "file": "C:/Users/axell/Desktop/info/snake++/src/main.cpp",
-  "output": "CMakeFiles/snake++.dir/src/main.cpp.obj"
+  "output": "CMakeFiles/Snake++.dir/src/main.cpp.obj"
 },
 {
   "directory": "C:/Users/axell/Desktop/info/snake++/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/snake++.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\snake++.dir\\src\\game.cpp.obj -c C:\\Users\\axell\\Desktop\\info\\snake++\\src\\game.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/Snake++.dir/includes_CXX.rsp  -Wall -Wextra -Werror -pedantic -Wshadow -g -O2 -g -std=gnu++20 -o CMakeFiles\\Snake++.dir\\src\\game.cpp.obj -c C:\\Users\\axell\\Desktop\\info\\snake++\\src\\game.cpp",
   "file": "C:/Users/axell/Desktop/info/snake++/src/game.cpp",
-  "output": "CMakeFiles/snake++.dir/src/game.cpp.obj"
+  "output": "CMakeFiles/Snake++.dir/src/game.cpp.obj"
 },
 {
   "directory": "C:/Users/axell/Desktop/info/snake++/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/snake++.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\snake++.dir\\src\\viewport.cpp.obj -c C:\\Users\\axell\\Desktop\\info\\snake++\\src\\viewport.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/Snake++.dir/includes_CXX.rsp  -Wall -Wextra -Werror -pedantic -Wshadow -g -O2 -g -std=gnu++20 -o CMakeFiles\\Snake++.dir\\src\\viewport.cpp.obj -c C:\\Users\\axell\\Desktop\\info\\snake++\\src\\viewport.cpp",
   "file": "C:/Users/axell/Desktop/info/snake++/src/viewport.cpp",
-  "output": "CMakeFiles/snake++.dir/src/viewport.cpp.obj"
+  "output": "CMakeFiles/Snake++.dir/src/viewport.cpp.obj"
 },
 {
   "directory": "C:/Users/axell/Desktop/info/snake++/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/snake++.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\snake++.dir\\src\\snake.cpp.obj -c C:\\Users\\axell\\Desktop\\info\\snake++\\src\\snake.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/Snake++.dir/includes_CXX.rsp  -Wall -Wextra -Werror -pedantic -Wshadow -g -O2 -g -std=gnu++20 -o CMakeFiles\\Snake++.dir\\src\\snake.cpp.obj -c C:\\Users\\axell\\Desktop\\info\\snake++\\src\\snake.cpp",
   "file": "C:/Users/axell/Desktop/info/snake++/src/snake.cpp",
-  "output": "CMakeFiles/snake++.dir/src/snake.cpp.obj"
+  "output": "CMakeFiles/Snake++.dir/src/snake.cpp.obj"
 }
 ]

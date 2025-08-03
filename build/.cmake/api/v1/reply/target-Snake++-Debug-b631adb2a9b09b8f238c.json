@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "snake++.exe"
+			"path" : "Snake++.exe"
 		},
 		{
-			"path" : "snake++.pdb"
+			"path" : "Snake++.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -29,19 +29,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 17,
+				"line" : 19,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 8,
+				"line" : 10,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++20"
+					"fragment" : " -Wall -Wextra -Werror -pedantic -Wshadow -g -O2 -g -std=gnu++20"
 				}
 			],
 			"includes" : 
@@ -80,13 +80,13 @@
 			]
 		}
 	],
-	"id" : "snake++::@6890427a1f51a3e7e1df",
+	"id" : "Snake++::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-Wall -Wextra -Werror -pedantic -Wshadow -g -O2 -g",
 				"role" : "flags"
 			},
 			{
@@ -106,8 +106,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "snake++",
-	"nameOnDisk" : "snake++.exe",
+	"name" : "Snake++",
+	"nameOnDisk" : "Snake++.exe",
 	"paths" : 
 	{
 		"build" : ".",

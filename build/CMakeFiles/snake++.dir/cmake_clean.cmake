@@ -1,19 +1,19 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/snake++.dir/src/game.cpp.obj"
-  "CMakeFiles/snake++.dir/src/game.cpp.obj.d"
-  "CMakeFiles/snake++.dir/src/main.cpp.obj"
-  "CMakeFiles/snake++.dir/src/main.cpp.obj.d"
-  "CMakeFiles/snake++.dir/src/snake.cpp.obj"
-  "CMakeFiles/snake++.dir/src/snake.cpp.obj.d"
-  "CMakeFiles/snake++.dir/src/viewport.cpp.obj"
-  "CMakeFiles/snake++.dir/src/viewport.cpp.obj.d"
-  "libsnake++.dll.a"
-  "snake++.exe"
-  "snake++.exe.manifest"
-  "snake++.pdb"
+  "CMakeFiles/Snake++.dir/src/game.cpp.obj"
+  "CMakeFiles/Snake++.dir/src/game.cpp.obj.d"
+  "CMakeFiles/Snake++.dir/src/main.cpp.obj"
+  "CMakeFiles/Snake++.dir/src/main.cpp.obj.d"
+  "CMakeFiles/Snake++.dir/src/snake.cpp.obj"
+  "CMakeFiles/Snake++.dir/src/snake.cpp.obj.d"
+  "CMakeFiles/Snake++.dir/src/viewport.cpp.obj"
+  "CMakeFiles/Snake++.dir/src/viewport.cpp.obj.d"
+  "Snake++.exe"
+  "Snake++.exe.manifest"
+  "Snake++.pdb"
+  "libSnake++.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/snake++.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/Snake++.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

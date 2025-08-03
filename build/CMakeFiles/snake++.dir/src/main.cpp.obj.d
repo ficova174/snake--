@@ -1,4 +1,4 @@
-CMakeFiles/snake++.dir/src/main.cpp.obj: \
+CMakeFiles/Snake++.dir/src/main.cpp.obj: \
  C:\Users\axell\Desktop\info\snake++\src\main.cpp \
  C:/msys64/mingw64/include/c++/15.1.0/iostream \
  C:/msys64/mingw64/include/c++/15.1.0/bits/requires_hosted.h \

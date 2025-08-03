@@ -13,7 +13,7 @@ bool gameInit() {
     SDL_SetAppMetadataProperty(SDL_PROP_APP_METADATA_CREATOR_STRING, "Axel L.");
 
     if (!SDL_Init(SDL_INIT_VIDEO)) {
-        SDL_Log("Failed to initialize SDL: %u", SDL_GetError());
+        SDL_Log("Failed to initialize SDL: %s", SDL_GetError());
         SDL_Quit();
         return 1;
     }
